@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CSS Positioning, Display, Float, Flexbox & Grid — Demo</title>
+    <style>
+      :root {
+        --ink: #0f172a;
+        --muted: #64748b;
+        --accent: #7c3aed;
+        --bg: #f8fafc;
+        --panel: #ffffff;
+        --gap: 16px;
+        --radius: 10px;
+      }
+
+      /* Page frame */
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        margin: 0;
+        font: 14px/1.5 system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+        color: var(--ink);
+        background: var(--bg);
+      }
+      .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 24px;
+        display: grid;
+        gap: 24px;
+      }
+      h2 {
+        margin: 0 0 8px;
+        font-size: 20px;
+      }
+      p {
+        margin: 0 0 10px;
+        color: var(--muted);
+      }
+
+      .panel {
+        background: var(--panel);
+        border: 1px solid #e2e8f0;
+        border-radius: var(--radius);
+        padding: 16px;
+      }
+
+      /* --- 1) position: static/relative/absolute/fixed/sticky --- */
+      .stage {
+        position: relative;
+        height: 200px;
+        background: #f1f5f9;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      .box {
+        width: 120px;
+        height: 120px;
+        border-radius: 8px;
+        display: grid;
+        place-content: center;
+        font-weight: 600;
+      }
+
+      .static {
+        background: #dbeafe;
+      }
+      .relative {
+        background: #fde68a;
+        position: relative;
+        top: 10px;
+        left: 10px;
+      }
+      .absolute {
+        background: #fca5a5;
+        position: absolute;
+        top: 18px;
+        right: 16px;
+      }
+      .fixed {
+        background: #86efac;
+        position: fixed;
+        bottom: 24px;
+        right: 24px;
+        z-index: 999;
+        box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
+      }
+      .sticky-banner {
+        position: sticky;
+        top: 0;
+        background: #ede9fe;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 10px 12px;
+        z-index: 10;
+      }
+
+      /* --- 2) display: inline vs block --- */
+      .display-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        align-items: center;
+      }
+      .inline-sample a {
+        background: #e2e8f0;
+        padding: 2px 8px;
+        border-radius: 999px;
+      }
+      .block-sample .tag {
+        display: block;
+        background: #e2e8f0;
+        padding: 6px 10px;
+        border-radius: 6px;
+      }
+      .make-block {
+        display: block;
+      }
+      .make-inline {
+        display: inline;
+      }
+
+      /* --- 3) float & clear --- */
+      .float-wrap {
+        background: #f8fafc;
+        border: 1px dashed #cbd5e1;
+        padding: 12px;
+        border-radius: 8px;
+      }
+      .float-img {
+        width: 140px;
+        height: 100px;
+        background: #c7d2fe;
+        float: right;
+        margin: 0 0 8px 12px;
+        display: grid;
+        place-content: center;
+        font-weight: 600;
+      }
+      .clear-both {
+        clear: right;
+      }
+
+      /* --- 4) flexbox --- */
+      .flexbar {
+        display: flex;
+        gap: 8px;
+        padding: 8px;
+        border-radius: 8px;
+        background: #f1f5f9;
+      }
+      .flexbar .item {
+        padding: 10px 12px;
+        background: #ddd6fe;
+        border-radius: 6px;
+      }
+      .flex-demo {
+        display: flex;
+        gap: 12px;
+        border: 1px dashed #cbd5e1;
+        padding: 12px;
+        border-radius: 8px;
+        min-height: 80px;
+      }
+      .flex-demo.row {
+        flex-direction: row;
+      }
+      .flex-demo.column {
+        flex-direction: column;
+        height: 160px;
+      }
+      .flex-demo.wrap {
+        flex-wrap: wrap;
+      }
+      .flex-demo.centered {
+        justify-content: center;
+        align-items: center;
+      }
+      .flex-demo.space-between {
+        justify-content: space-between;
+        align-items: center;
+      }
+      .chip {
+        padding: 8px 10px;
+        background: #fee2e2;
+        border-radius: 999px;
+      }
+
+      /* --- 5) grid --- */
+      .grid-basic {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 80px 200px;
+        gap: 10px;
+        background: #dbeafe;
+        padding: 10px;
+        border-radius: 8px;
+      }
+      .grid-basic > div {
+        background: rgba(255, 255, 255, 0.85);
+        display: grid;
+        place-content: center;
+        border-radius: 6px;
+        font-weight: 600;
+      }
+
+      /* Grid item spanning */
+      .grid-items {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-auto-rows: 80px;
+        gap: 10px;
+      }
+      .grid-items > div {
+        background: #f1f5f9;
+        display: grid;
+        place-content: center;
+        border-radius: 6px;
+        border: 1px solid #e2e8f0;
+      }
+      .span-wide {
+        grid-column: 1 / span 3;
+      }
+      .span-tall {
+        grid-row: 1 / span 2;
+      }
+
+      /* --- 6) Page layout with grid-template-areas + responsive swap --- */
+      .site {
+        display: grid;
+        grid-template-areas:
+          'header header header header'
+          'menu   main   main   right'
+          'menu   footer footer footer';
+        grid-template-columns: 180px 1fr 1fr 260px;
+        grid-auto-rows: auto;
+        gap: 10px;
+        background: #e0f2fe;
+        padding: 10px;
+        border-radius: 8px;
+      }
+      .site > .cell {
+        background: #fff;
+        border-radius: 6px;
+        display: grid;
+        place-content: center;
+        min-height: 80px;
+        font-weight: 600;
+      }
+      .item1 {
+        grid-area: header;
+      }
+      .item2 {
+        grid-area: menu;
+      }
+      .item3 {
+        grid-area: main;
+        min-height: 140px;
+      }
+      .item4 {
+        grid-area: right;
+      }
+      .item5 {
+        grid-area: footer;
+      }
+
+      /* Responsive rewrite: stack on narrow screens */
+      @media (max-width: 700px) {
+        .site {
+          grid-template-areas:
+            'header'
+            'menu'
+            'main'
+            'right'
+            'footer';
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* Utility */
+      .muted {
+        color: var(--muted);
+      }
+      .note {
+        margin-top: 6px;
+        font-size: 12px;
+        color: #475569;
+      }
+      .hr {
+        height: 1px;
+        background: #e2e8f0;
+        margin: 8px 0 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sticky-banner">
+      This banner is <strong>position: sticky</strong> (sticks to top while its
+      container scrolls).
+    </div>
+
+    <div class="container">
+      <div class="panel">
+        <h2>
+          1) <code>position</code> (static · relative · absolute · fixed ·
+          sticky)
+        </h2>
+        <p class="muted">
+          The stage below contains several boxes using different
+          <code>position</code> values.
+        </p>
+        <div class="stage">
+          <div class="box static">static</div>
+          <div class="box relative">relative</div>
+          <div class="box absolute">absolute</div>
+        </div>
+        <div class="note">
+          The green “fixed” button stays pinned to the viewport.
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>2) <code>display</code>: inline vs block</h2>
+        <div class="display-row inline-sample">
+          <span class="muted">Inline (flows with text):</span>
+          <a href="#">Link A</a><a href="#">Link B</a><a href="#">Link C</a>
+        </div>
+        <div class="display-row block-sample" style="margin-top: 8px">
+          <span class="muted">Block (breaks line, can size):</span>
+          <span class="tag">Tag 1</span>
+          <span class="tag make-inline">Tag 2 forced inline</span>
+          <a href="#" class="make-block tag">Link forced block</a>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>3) Float + Clear</h2>
+        <div class="float-wrap">
+          <div class="float-img">float: right</div>
+          <p>
+            Paragraph wraps around the floated box. Historically used for text
+            wrap and multi-column tricks.
+          </p>
+          <p class="clear-both">
+            This paragraph has <code>clear:right</code> so it drops below the
+            float.
+          </p>
+          <div class="hr"></div>
+          <p class="note">
+            Today, prefer Flexbox/Grid for layout; use float for text wrap
+            scenarios.
+          </p>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>4) Flexbox (1D layout)</h2>
+        <div class="flexbar">
+          <span class="item">row</span>
+          <span class="item">wrap</span>
+          <span class="item">justify-content</span>
+          <span class="item">align-items</span>
+        </div>
+
+        <p><strong>Row, spaced</strong></p>
+        <div class="flex-demo row space-between">
+          <div class="chip">A</div>
+          <div class="chip">B</div>
+          <div class="chip">C</div>
+        </div>
+
+        <p style="margin-top: 10px"><strong>Column, centered</strong></p>
+        <div class="flex-demo column centered">
+          <div class="chip">1</div>
+          <div class="chip">2</div>
+          <div class="chip">3</div>
+        </div>
+
+        <p style="margin-top: 10px"><strong>Wrapping row</strong></p>
+        <div class="flex-demo row wrap">
+          <div class="chip">Item 1</div>
+          <div class="chip">Item 2</div>
+          <div class="chip">Item 3</div>
+          <div class="chip">Item 4</div>
+          <div class="chip">Item 5</div>
+          <div class="chip">Item 6</div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>5) Grid (2D layout)</h2>
+        <p class="muted">Three columns, two rows, with gaps:</p>
+        <div class="grid-basic">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+          <div>6</div>
+        </div>
+
+        <p style="margin-top: 10px">
+          <strong
+            >Item spanning with <code>grid-column</code> /
+            <code>grid-row</code></strong
+          >
+        </p>
+        <div class="grid-items" style="margin-top: 6px">
+          <div class="span-wide">col 1 / span 3</div>
+          <div>cell</div>
+          <div>cell</div>
+          <div class="span-tall">row 1 / span 2</div>
+          <div>cell</div>
+          <div>cell</div>
+          <div>cell</div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>
+          6) Page layout with <code>grid-template-areas</code> + responsive
+          rewrite
+        </h2>
+        <p class="muted">
+          Resize the viewport to see the layout swap to a single column at
+          ≤700px.
+        </p>
+        <div class="site">
+          <div class="cell item1">Header</div>
+          <div class="cell item2">Menu</div>
+          <div class="cell item3">Main</div>
+          <div class="cell item4">Right</div>
+          <div class="cell item5">Footer</div>
+        </div>
+      </div>
+    </div>
+
+    <button class="fixed">fixed<br />CTA</button>
+  </body>
+</html>
