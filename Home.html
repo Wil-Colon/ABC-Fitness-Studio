@@ -3,46 +3,101 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="home.css" />
     <link rel="stylesheet" href="styles.css" />
     <title>Home</title>
   </head>
   <body>
-    <header>
-      <img src="images/logo1.png" width="50px" alt="ABC Fitness Logo" />
-      <nav aria-label="Primary">
-        <ul>
+    <header class="header">
+      <img
+        class="header-logo"
+        src="images/logo1.png"
+        width="50px"
+        alt="ABC Fitness
+      Logo"
+      />
+      <div class="header-menu">
+        <nav>
+          <ul class="header-nav" aria-label="Primary">
+            <li><a href="Home.html" class="header-nav-item">Home</a></li>
+            <li><a href="About.html" class="header-nav-item">About Us</a></li>
+            <li><a href="Gallery.html" class="header-nav-item">Gallery</a></li>
+            <li><a href="Other.html" class="header-nav-item">Community</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="burgermenu" aria-label="Open menu">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="2.0em"
+          viewBox="0 0 448 512"
+        >
+          <path
+            d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+          />
+        </svg>
+        <ul class="burgermenu-links">
           <li><a href="Home.html">Home</a></li>
           <li><a href="About.html">About Us</a></li>
           <li><a href="Gallery.html">Gallery</a></li>
           <li><a href="Other.html">Community</a></li>
-          <li><button aria-label="Open menu">☰</button></li>
         </ul>
-      </nav>
+      </div>
     </header>
 
     <main>
-      <section aria-labelledby="hero-heading">
-        <h1 id="hero-heading">Headline: Small Workouts That Fit Your Life</h1>
-        <p>Subhead: Pilates • Pilates • Zumba</p>
-        <p><a href="#" role="button">CTA</a></p>
-      </section>
+      <div aria-labelledby="hero-heading" id="hero-heading">
+        <h1>Small Workouts That Fit Your Life</h1>
+        <p>Pilates • Pilates • Zumba</p>
 
-      <section aria-labelledby="intro-heading">
-        <h2 id="intro-heading">New to Pilates or New to Our Studio?</h2>
-        <p>Quick intro copy goes here</p>
-        <ul>
-          <li>New-Client Special • Private Intro</li>
-          <li>New-Client Special • Small Group</li>
-        </ul>
-      </section>
+        <button><a href="Gallery.html" role="button">Start Today</a></button>
+      </div>
 
-      <section aria-labelledby="goals-heading">
+      <div class="intro-heading-container">
+        <h2>New to Pilates or New to Our Studio?</h2>
+        <p>We offer great new member specials!</p>
+        <div aria-labelledby="intro-heading" id="intro-heading">
+          <div class="offer-content">
+            <h2 id="offer-title" class="offer-title">
+              New Client Special<br />Private Sessions
+            </h2>
+
+            <p class="offer-price">2 Privates for $120</p>
+            <p class="offer-note">*30 day expiration.</p>
+
+            <a href="Gallery.html" class="button">Purchase Now</a>
+
+            <p class="offer-desc">
+              (recommended for all students before joining<br />in-studio
+              classes)
+            </p>
+          </div>
+          <div class="offer-content">
+            <h2 id="offer-title" class="offer-title">
+              New Client Special<br />Group Classes
+            </h2>
+
+            <p class="offer-price">3 Group classes for $80</p>
+            <p class="offer-note"><em>*30 day expiration.</em></p>
+
+            <a href="Gallery.html" class="button">Purchase Now</a>
+
+            <p class="offer-desc">
+              (recommended for all students before joining<br />in-studio
+              classes)
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div aria-labelledby="goals-heading">
         <h2 id="goals-heading">Meet Your Fitness Goals</h2>
         <p>Motivation • Education • Inspiration</p>
         <p><a href="#" role="button">START TODAY</a></p>
-      </section>
+      </div>
 
-      <section aria-labelledby="services-heading">
+      <div aria-labelledby="services-heading">
         <h2 id="services-heading" class="visually-hidden">Services</h2>
         <article>
           <h3>Pilates</h3>
@@ -56,9 +111,9 @@
           <h3>Zumba</h3>
           <p><a href="#" role="button">Learn More</a></p>
         </article>
-      </section>
+      </div>
 
-      <section aria-labelledby="about-heading">
+      <div aria-labelledby="about-heading">
         <h2 id="about-heading">
           An Intimate Pilates and Personal Training Studio
         </h2>
@@ -66,9 +121,9 @@
           <a href="#home" role="button">BOOK A 1:1 SESSION</a>
           <a href="#home" role="button">ABOUT THE STUDIO</a>
         </p>
-      </section>
+      </div>
 
-      <section aria-labelledby="reviews-heading">
+      <div aria-labelledby="reviews-heading">
         <h2 id="reviews-heading">★★★★★ Client Reviews</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
@@ -80,9 +135,9 @@
           vulputate metus dictum. Fusce lacinia tortor ligula, at lobortis
           tellus faucibus vitae.
         </p>
-      </section>
+      </div>
 
-      <section aria-labelledby="newsletter-heading">
+      <div aria-labelledby="newsletter-heading">
         <h2 id="newsletter-heading">Subscribe to Our Newsletter</h2>
         <form action="#" method="post" aria-label="Newsletter signup">
           <label for="email">Email address</label>
@@ -97,7 +152,7 @@
           />
           <button type="submit">Submit</button>
         </form>
-      </section>
+      </div>
     </main>
 
     <footer>

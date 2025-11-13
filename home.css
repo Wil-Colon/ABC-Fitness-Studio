@@ -1,0 +1,243 @@
+.nothing {
+  color: #17253f;
+  color: #2343bd;
+  color: #91b9d2;
+  color: #def479;
+  color: #fcfcfc;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #91b9d2;
+  padding: 0.5rem 1rem;
+  border-bottom: 0.2rem solid;
+}
+
+.header-menu {
+  display: none;
+}
+
+.burgermenu {
+  position: relative;
+  display: block;
+}
+
+.burgermenu:visited {
+  position: relative;
+  display: block;
+  text-decoration: none;
+}
+
+.burgermenu-links {
+  position: absolute;
+  visibility: hidden;
+  list-style-type: none;
+  padding: 25px 10px;
+  text-align: center;
+  width: 15rem;
+  color: #171717;
+  background-color: #fcfcfc;
+  font-size: 1.8rem;
+  border-radius: 1rem;
+}
+
+.burgermenu:hover .burgermenu-links {
+  visibility: visible;
+  display: block;
+  margin: 0 auto;
+  left: -13rem;
+}
+
+#hero-heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("images/yoga-hero.jpg");
+  height: 100vh;
+  padding: 1rem;
+  height: 75vh;
+  padding: 1rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 60%;
+  color: #fcfcfc;
+}
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+p {
+  font-size: 1.8rem;
+}
+
+#hero-heading h1 {
+  align-self: center;
+  text-align: center;
+}
+
+#hero-heading p {
+  align-self: center;
+}
+
+button {
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  background: #def479;
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none; /* no underline */
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  width: 20rem;
+  height: 5rem;
+  margin: 0 auto;
+}
+
+button:hover,
+button:focus-visible {
+  opacity: 0.8; /* dim on hover */
+}
+
+.intro-heading-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.intro-heading-container h2 {
+  color: #91b9d2;
+  font-size: 3.5rem;
+  margin: 5rem 0 2rem;
+  padding: 1rem;
+  letter-spacing: -0.2rem;
+  line-height: 3.5rem;
+  text-shadow: 0.5px 0.5px black;
+}
+
+.intro-heading-container p {
+  /* font-size: 1.5rem; */
+  letter-spacing: 0.3rem;
+}
+
+#intro-heading {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 2rem 0;
+  margin: 1rem;
+  color: #fcfcfc;
+  /* background-color: #17253f; */
+}
+
+.offer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 5rem;
+  background-color: #17253f;
+}
+
+.offer-title {
+  font-weight: 600;
+  line-height: 1.25;
+  margin: 0 0 20px;
+}
+
+.offer-price {
+  font-weight: 700;
+  margin: 0 0 12px;
+}
+
+.offer-note {
+  color: #d7d7d7;
+  margin: 0 0 24px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #def479;
+  color: #17253f;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+  font-size: 1.4rem;
+  transition: filter 0.2s ease;
+}
+
+.button:hover,
+.button:focus-visible {
+  filter: brightness(0.9);
+}
+
+.offer-desc {
+  font-size: 15px;
+  line-height: 1.4;
+  opacity: 0.9;
+  margin: 0;
+  padding: 1rem;
+}
+@media all and (min-width: 480px) {
+  .burgermenu {
+    display: none;
+  }
+
+  .header-menu {
+    display: flex;
+  }
+
+  .header-nav {
+    display: flex;
+    justify-content: space-around;
+    width: 40rem;
+  }
+
+  .header-nav-item,
+  .header-nav-item:link,
+  .header-nav-item:visited,
+  .header-nav-item:hover,
+  .header-nav-item:active {
+    font-size: 2rem;
+    color: inherit;
+    text-decoration: none;
+    outline: none;
+    background: none;
+    border: 0;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .header-nav-item:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+  }
+
+  .header-nav-item:hover {
+    text-decoration: underline;
+    color: #def479;
+  }
+
+  .intro-heading-container {
+    max-width: 105rem;
+    margin-inline: auto;
+    padding-inline: 16px;
+  }
+  #intro-heading {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
