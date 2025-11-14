@@ -15,6 +15,11 @@ html {
 }
 
 @media only screen and (min-width: 480px) {
+  main {
+    max-width: 150rem;
+    margin: 0 auto;
+  }
+
   html h1 {
     font-size: 3.5rem;
   }
@@ -29,6 +34,7 @@ html {
 body {
   font-family: "Calibri", sans-serif;
   color: #00231c;
+  background-color: #fbfaf8;
   font-weight: 300;
   line-height: 1.6;
 }

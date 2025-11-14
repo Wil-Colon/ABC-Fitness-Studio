@@ -48,14 +48,14 @@
 
     <main>
       <div aria-labelledby="hero-heading" id="hero-heading">
-        <h1>Small Workouts That Fit Your Life</h1>
-        <p>Pilates • Pilates • Zumba</p>
+        <h1>Classes That Fit Your Life</h1>
+        <p>Pilates • Yoga • Zumba</p>
 
         <button><a href="Gallery.html" role="button">Start Today</a></button>
       </div>
 
       <div class="intro-heading-container">
-        <h2>New to Pilates or New to Our Studio?</h2>
+        <h2>New to Yoga, Pilates, Zumba or New to Our Studio?</h2>
         <p>We offer great new member specials!</p>
         <div aria-labelledby="intro-heading" id="intro-heading">
           <div class="offer-content">
@@ -65,8 +65,9 @@
 
             <p class="offer-price">2 Privates for $120</p>
             <p class="offer-note">*30 day expiration.</p>
-
-            <a href="Gallery.html" class="button">Purchase Now</a>
+            <button>
+              <a href="Gallery.html">Purchase Now</a>
+            </button>
 
             <p class="offer-desc">
               (recommended for all students before joining<br />in-studio
@@ -80,8 +81,9 @@
 
             <p class="offer-price">3 Group classes for $80</p>
             <p class="offer-note"><em>*30 day expiration.</em></p>
-
-            <a href="Gallery.html" class="button">Purchase Now</a>
+            <button>
+              <a href="Gallery.html">Purchase Now</a>
+            </button>
 
             <p class="offer-desc">
               (recommended for all students before joining<br />in-studio
@@ -91,53 +93,152 @@
         </div>
       </div>
 
-      <div aria-labelledby="goals-heading">
-        <h2 id="goals-heading">Meet Your Fitness Goals</h2>
-        <p>Motivation • Education • Inspiration</p>
-        <p><a href="#" role="button">START TODAY</a></p>
+      <div aria-labelledby="goals" class="goals">
+        <div class="goals-media">
+          <figure class="goals-media-pic">
+            <img src="images/training.jpg" alt="Clients training picture" />
+          </figure>
+
+          <div class="goals-content">
+            <h2>
+              Meet Your Fitness Goals at<br /><span class="goals-studioname">
+                ABC Fitness
+              </span>
+            </h2>
+            <p>
+              We understand that life gets busy—between packed schedules,
+              limited motivation, and not always knowing where to begin,
+              <strong>prioritizing your health can be a challenge</strong>.
+            </p>
+            <p>
+              At ABC Fitness, our mission is to provide empowering,
+              results-driven workouts designed to challenge, energize, and
+              inspire you—no matter where you are in your fitness journey.
+            </p>
+            <p>
+              Whether you're working toward weight loss, building strength and
+              tone, or recovering from an injury, our expert-led programs are
+              tailored to support your goals and help you move with purpose.
+            </p>
+          </div>
+        </div>
       </div>
 
-      <div aria-labelledby="services-heading">
-        <h2 id="services-heading" class="visually-hidden">Services</h2>
-        <article>
-          <h3>Pilates</h3>
-          <p><a href="#" role="button">Learn More</a></p>
-        </article>
-        <article>
-          <h3>Yoga</h3>
-          <p><a href="#" role="button">Learn More</a></p>
-        </article>
-        <article>
-          <h3>Zumba</h3>
-          <p><a href="#" role="button">Learn More</a></p>
-        </article>
+      <div class="services-container">
+        <h2 class="services-heading">Meet Your Fitness Goals</h2>
+        <p class="services-subheading">Balance • Harmony • Active Living</p>
+        <div class="services-wrap" aria-label="Studio services">
+          <article class="services">
+            <img
+              class="services-media"
+              src="images/pilates1.jpg"
+              alt="Pilates class picture"
+            />
+
+            <h2 class="services-title">Pilates</h2>
+            <p class="services-text">
+              Core strength, control, and mobility with small, precise
+              movements.
+            </p>
+            <button>
+              <a href="Gallery.html">Learn More</a>
+            </button>
+          </article>
+
+          <article class="services">
+            <img
+              class="services-media"
+              src="images/yoga1.jpg"
+              alt="Yoga in session"
+            />
+            <h2 class="services-title">Yoga</h2>
+            <p class="services-text">
+              Balance breath and movement to build flexibility and calm focus.
+            </p>
+            <button>
+              <a href="Gallery.html">Learn More</a>
+            </button>
+          </article>
+
+          <article class="services">
+            <img
+              class="services-media"
+              src="images/zumba1.jpg"
+              alt="Yoga in session"
+            />
+            <h2 class="services-title">Zumba</h2>
+            <p class="services-text">
+              High-energy dance workout set to upbeat music—fun cardio for all
+              levels.
+            </p>
+            <button>
+              <a href="Gallery.html">Learn More</a>
+            </button>
+          </article>
+        </div>
       </div>
 
-      <div aria-labelledby="about-heading">
-        <h2 id="about-heading">
-          An Intimate Pilates and Personal Training Studio
-        </h2>
+      <div aria-labelledby="about" class="about">
+        <div class="about-media">
+          <figure class="about-media-pic" style="order: 2">
+            <img src="images/training.jpg" alt="Clients training picture" />
+          </figure>
+
+          <div class="about-content">
+            <h2>An Intimate Pilates, Yoga and Zumba Studio</h2>
+            <p>
+              Life can get hectic. With packed schedules, fluctuating
+              motivation, and uncertainty about where to start,<strong>
+                prioritizing your health isn’t always easy.
+              </strong>
+            </p>
+            <div class="button-container">
+              <button>
+                <a href="#home" role="button">BOOK A 1:1 SESSION</a>
+              </button>
+              <button>
+                <a href="#home" role="button">ABOUT THE STUDIO</a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="reviews" aria-label="Customer reviews">
+        <article class="reviews-card">
+          <div class="reviews-stars" aria-label="5 out of 5 stars" role="img">
+            ★★★★★
+          </div>
+
+          <blockquote class="reviews-quote">
+            Great staff! The class left me feeling relaxed and motivated to
+            continue my health journey! Higly recommend!
+          </blockquote>
+
+          <div class="reviews-profile">
+            <img class="reviews-avatar" src="images/review-cat.jpg" alt="" />
+            <div class="reviews-name">Kitten Cats</div>
+          </div>
+
+          <img
+            class="reviews-brand"
+            src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"
+            alt="Google"
+          />
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <section class="contact-heading">
+        <h2 id="contact-heading">Contact</h2>
         <p>
-          <a href="#home" role="button">BOOK A 1:1 SESSION</a>
-          <a href="#home" role="button">ABOUT THE STUDIO</a>
+          1234 Fake Street, Suite 200<br />
+          City, ST 90210 <br />
+          555-555-5555
         </p>
-      </div>
-
-      <div aria-labelledby="reviews-heading">
-        <h2 id="reviews-heading">★★★★★ Client Reviews</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-          malesuada justo lorem, nec iaculis ligula scelerisque bibendum.
-          Vestibulum blandit posuere turpis eu porta. Nullam convallis dolor
-          molestie risus facilisis ullamcorper. Vestibulum malesuada eros dolor,
-          et convallis risus eleifend eu. Pellentesque condimentum interdum mi
-          sed mattis. Pellentesque iaculis est et nibh semper, sit amet
-          vulputate metus dictum. Fusce lacinia tortor ligula, at lobortis
-          tellus faucibus vitae.
-        </p>
-      </div>
-
-      <div aria-labelledby="newsletter-heading">
+      </section>
+      <div class="newsletter-heading">
         <h2 id="newsletter-heading">Subscribe to Our Newsletter</h2>
         <form action="#" method="post" aria-label="Newsletter signup">
           <label for="email">Email address</label>
@@ -153,24 +254,14 @@
           <button type="submit">Submit</button>
         </form>
       </div>
-    </main>
 
-    <footer>
-      <p>© ABC Fitness Studio — All rights reserved</p>
-      <section aria-labelledby="hours-heading">
+      <section class="hours-heading">
         <h2 id="hours-heading">Hours</h2>
         <p>Monday–Friday: 6 a.m. to 8 p.m.</p>
         <p>Saturday: 8 a.m. to 6 p.m.</p>
         <p>Sunday: Closed</p>
       </section>
-      <section aria-labelledby="contact-heading">
-        <h2 id="contact-heading">Contact</h2>
-        <address>
-          1234 Fake Street, Suite 200<br />
-          City, ST 90210 <br />
-          555-555-5555
-        </address>
-      </section>
+      <p>© ABC Fitness Studio — All rights reserved</p>
     </footer>
   </body>
 </html>
