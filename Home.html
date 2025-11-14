@@ -16,18 +16,25 @@
         alt="ABC Fitness
       Logo"
       />
-      <div class="header-menu">
-        <nav>
-          <ul class="header-nav" aria-label="Primary">
-            <li><a href="Home.html" class="header-nav-item">Home</a></li>
-            <li><a href="About.html" class="header-nav-item">About Us</a></li>
-            <li><a href="Gallery.html" class="header-nav-item">Gallery</a></li>
-            <li><a href="Other.html" class="header-nav-item">Community</a></li>
-          </ul>
-        </nav>
-      </div>
+      <nav class="header-menu" aria-label="Main site navigation">
+        <ul class="header-nav">
+          <li>
+            <a href="Home.html" class="header-nav-item" aria-current="home"
+              >Home</a
+            >
+          </li>
+          <li><a href="About.html" class="header-nav-item">About Us</a></li>
+          <li><a href="Gallery.html" class="header-nav-item">Gallery</a></li>
+          <li><a href="Other.html" class="header-nav-item">Community</a></li>
+        </ul>
+      </nav>
 
-      <div class="burgermenu" aria-label="Open menu">
+      <button
+        class="burgermenu"
+        type="button"
+        aria-label="Open main menu"
+        aria-controls="mobile-nav"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           height="2.0em"
@@ -37,64 +44,71 @@
             d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
           />
         </svg>
-        <ul class="burgermenu-links">
-          <li><a href="Home.html">Home</a></li>
-          <li><a href="About.html">About Us</a></li>
-          <li><a href="Gallery.html">Gallery</a></li>
-          <li><a href="Other.html">Community</a></li>
-        </ul>
-      </div>
+        <nav
+          id="mobile-nav"
+          class="burgermenu-links"
+          aria-label="Mobile main navigation"
+        >
+          <ul>
+            <li><a href="Home.html" aria-current="home">Home</a></li>
+            <li><a href="About.html">About Us</a></li>
+            <li><a href="Gallery.html">Gallery</a></li>
+            <li><a href="Other.html">Community</a></li>
+          </ul>
+        </nav>
+      </button>
     </header>
 
-    <main>
-      <div aria-labelledby="hero-heading" id="hero-heading">
+    <main id="main content">
+      <header aria-labelledby="hero-heading" id="hero-heading">
         <h1>Classes That Fit Your Life</h1>
         <p>Pilates • Yoga • Zumba</p>
 
-        <button><a href="Gallery.html" role="button">Start Today</a></button>
-      </div>
+        <a class="button" href="Gallery.html" role="button">Start Today</a>
+      </header>
 
-      <div class="intro-heading-container">
-        <h2>New to Yoga, Pilates, Zumba or New to Our Studio?</h2>
+      <section aria-labelledby="intro-heading" class="intro-heading-container">
+        <h2 id="intro-heading">
+          New to Yoga, Pilates, Zumba or New to Our Studio?
+        </h2>
         <p>We offer great new member specials!</p>
         <div aria-labelledby="intro-heading" id="intro-heading">
-          <div class="offer-content">
-            <h2 id="offer-title" class="offer-title">
+          <article class="offer-content" aria-labelledby="offer-private-title">
+            <h3 id="offer-private-title" class="offer-title">
               New Client Special<br />Private Sessions
-            </h2>
+            </h3>
 
             <p class="offer-price">2 Privates for $120</p>
             <p class="offer-note">*30 day expiration.</p>
-            <button>
-              <a href="Gallery.html">Purchase Now</a>
-            </button>
+
+            <a href="Gallery.html" class="button">Purchase Now</a>
 
             <p class="offer-desc">
               (recommended for all students before joining<br />in-studio
               classes)
             </p>
-          </div>
-          <div class="offer-content">
-            <h2 id="offer-title" class="offer-title">
+          </article>
+
+          <article class="offer-content" aria-labelledby="offer-group-title">
+            <h3 id="offer-group-title" class="offer-title">
               New Client Special<br />Group Classes
-            </h2>
+            </h3>
 
             <p class="offer-price">3 Group classes for $80</p>
             <p class="offer-note"><em>*30 day expiration.</em></p>
-            <button>
-              <a href="Gallery.html">Purchase Now</a>
-            </button>
+
+            <a href="Gallery.html" class="button">Purchase Now</a>
 
             <p class="offer-desc">
               (recommended for all students before joining<br />in-studio
               classes)
             </p>
-          </div>
+          </article>
         </div>
-      </div>
+      </section>
 
-      <div aria-labelledby="goals" class="goals">
-        <div class="goals-media">
+      <section aria-labelledby="goals-media" class="goals">
+        <div id="goals-media" class="goals-media">
           <figure class="goals-media-pic">
             <img src="images/training.jpg" alt="Clients training picture" />
           </figure>
@@ -122,10 +136,12 @@
             </p>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div class="services-container">
-        <h2 class="services-heading">Meet Your Fitness Goals</h2>
+      <section class="services-container" aria-labelledby="services-heading">
+        <h2 id="services-heading" class="services-heading">
+          Meet Your Fitness Goals
+        </h2>
         <p class="services-subheading">Balance • Harmony • Active Living</p>
         <div class="services-wrap" aria-label="Studio services">
           <article class="services">
@@ -140,9 +156,8 @@
               Core strength, control, and mobility with small, precise
               movements.
             </p>
-            <button>
-              <a href="Gallery.html">Learn More</a>
-            </button>
+
+            <a href="Gallery.html" class="button">Learn More</a>
           </article>
 
           <article class="services">
@@ -155,9 +170,8 @@
             <p class="services-text">
               Balance breath and movement to build flexibility and calm focus.
             </p>
-            <button>
-              <a href="Gallery.html">Learn More</a>
-            </button>
+
+            <a href="Gallery.html" class="button">Learn More</a>
           </article>
 
           <article class="services">
@@ -171,15 +185,14 @@
               High-energy dance workout set to upbeat music—fun cardio for all
               levels.
             </p>
-            <button>
-              <a href="Gallery.html">Learn More</a>
-            </button>
+
+            <a href="Gallery.html" class="button">Learn More</a>
           </article>
         </div>
-      </div>
+      </section>
 
-      <div aria-labelledby="about" class="about">
-        <div class="about-media">
+      <section aria-labelledby="about" class="about">
+        <div id="about" class="about-media">
           <figure class="about-media-pic" style="order: 2">
             <img src="images/training.jpg" alt="Clients training picture" />
           </figure>
@@ -193,19 +206,18 @@
               </strong>
             </p>
             <div class="button-container">
-              <button>
-                <a href="#home" role="button">BOOK A 1:1 SESSION</a>
-              </button>
-              <button>
-                <a href="#home" role="button">ABOUT THE STUDIO</a>
-              </button>
+              <a href="#home" class="button" role="button"
+                >BOOK A 1:1 SESSION</a
+              >
+
+              <a href="#home" class="button" role="button">ABOUT THE STUDIO</a>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <section class="reviews" aria-label="Customer reviews">
-        <article class="reviews-card">
+      <section class="reviews" aria-label="reviews-heading">
+        <article id="reviews-heading" class="reviews-card">
           <div class="reviews-stars" aria-label="5 out of 5 stars" role="img">
             ★★★★★
           </div>

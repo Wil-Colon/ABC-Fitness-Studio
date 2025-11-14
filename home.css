@@ -1,11 +1,3 @@
-.nothing {
-  color: #17253f;
-  color: #2343bd;
-  color: #91b9d2;
-  color: #def479;
-  color: #fcfcfc;
-}
-
 .header {
   display: flex;
   justify-content: space-between;
@@ -23,6 +15,12 @@
 .burgermenu {
   position: relative;
   display: block;
+  padding: 0.3rem 0.5rem;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none; /* no underline */
+  cursor: pointer;
+  transition: opacity 0.2s ease;
 }
 
 .burgermenu:visited {
@@ -87,7 +85,7 @@ p {
   align-self: center;
 }
 
-button {
+.button {
   display: inline-block;
   padding: 0.75rem 1.25rem;
   background: #def479;
@@ -101,10 +99,12 @@ button {
   width: 20rem;
   height: 5rem;
   margin: 0 auto;
+  font-size: 1.8rem;
+  text-align: center;
 }
 
-button:hover,
-button:focus-visible {
+.button:hover,
+.button:focus-visible {
   opacity: 0.8; /* dim on hover */
 }
 
@@ -114,12 +114,10 @@ button:focus-visible {
   text-align: center;
 }
 
-.intro-heading-container h2 {
-  font-size: 3.5rem;
+.intro-heading-container h3 {
   margin: 5rem 0 2rem;
   padding: 1rem;
   letter-spacing: 0.5rem;
-  line-height: 3.5rem;
 }
 
 .intro-heading-container p {
@@ -132,7 +130,6 @@ button:focus-visible {
   text-align: center;
   padding: 2rem 0;
   margin: 1rem;
-  color: #fcfcfc;
 }
 
 .offer-content {
@@ -151,11 +148,13 @@ button:focus-visible {
   font-weight: 600;
   line-height: 1.25;
   margin: 0 0 20px;
+  color: #fcfcfc;
 }
 
 .offer-price {
   font-weight: 700;
   margin: 0 0 12px;
+  color: #fcfcfc;
 }
 
 .offer-note {
@@ -169,6 +168,7 @@ button:focus-visible {
   opacity: 0.9;
   margin: 0;
   padding: 1rem;
+  color: #fcfcfc;
 }
 
 .goals {
@@ -268,7 +268,7 @@ button:focus-visible {
 }
 
 .services-media {
-  height: 30rem;
+  aspect-ratio: 4/3;
   border-radius: 0.8rem;
   background: linear-gradient(180deg, #e9e9e9, #d9d9d9);
   border: 1px solid #cfcfcf;
@@ -392,7 +392,6 @@ button:focus-visible {
   margin: 0 auto;
 }
 
-/* Stars */
 .reviews-stars {
   font-size: 22px;
   letter-spacing: 4px;
@@ -401,7 +400,6 @@ button:focus-visible {
   color: #f7c948; /* gold */
 }
 
-/* Review text */
 .reviews-quote {
   margin: 0 auto 18px;
   max-width: 58ch;
@@ -410,7 +408,6 @@ button:focus-visible {
   color: #4a4a4a;
 }
 
-/* Profile */
 .reviews-profile {
   display: flex;
   align-items: center;
@@ -433,7 +430,6 @@ button:focus-visible {
   color: #3b3b3b;
 }
 
-/* Brand (Google logo) */
 .reviews-brand {
   width: 28px;
   height: auto;
@@ -447,17 +443,16 @@ footer {
   flex-direction: column;
   background-color: #91b9d2;
   gap: 3rem;
-  align-items: center; /* center horizontally */
+  align-items: center;
   justify-content: center;
   padding: 1rem;
   border-top: 0.2rem solid;
+  align-items: flex-start;
 }
 
 .newsletter-heading form {
   display: flex;
   flex-direction: column;
-
-  /* width: 60%; */
 }
 
 .newsletter-heading button {
