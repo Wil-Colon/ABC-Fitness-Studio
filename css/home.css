@@ -18,7 +18,7 @@
   padding: 0.3rem 0.5rem;
   border: none;
   border-radius: 6px;
-  text-decoration: none; /* no underline */
+  text-decoration: none;
   cursor: pointer;
   transition: opacity 0.2s ease;
 }
@@ -55,7 +55,7 @@
   flex-direction: column;
   justify-content: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("images/yoga-hero.jpg");
+    url("../images/yoga-hero.jpg");
   height: 100vh;
   padding: 1rem;
   height: 75vh;
@@ -84,7 +84,7 @@
   color: #000;
   border: none;
   border-radius: 6px;
-  text-decoration: none; /* no underline */
+  text-decoration: none;
   font-weight: 600;
   cursor: pointer;
   transition: opacity 0.2s ease;
@@ -97,7 +97,7 @@
 
 .button:hover,
 .button:focus-visible {
-  opacity: 0.8; /* dim on hover */
+  opacity: 0.8;
 }
 
 .intro-heading-container {
@@ -184,7 +184,7 @@
 .goals-media-pic img {
   display: block;
   width: 100%;
-  height: auto; /* keep natural ratio */
+  height: auto;
   border-radius: 4px;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
 }
@@ -322,7 +322,7 @@
 .about-media-pic img {
   display: block;
   width: 100%;
-  height: auto; /* keep natural ratio */
+  height: auto;
   border-radius: 4px;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
   min-width: 10rem;
@@ -389,7 +389,7 @@
   letter-spacing: 4px;
   line-height: 1;
   margin-bottom: 12px;
-  color: #f7c948; /* gold */
+  color: #f7c948;
 }
 
 .reviews-quote {
