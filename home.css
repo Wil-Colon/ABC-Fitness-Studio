@@ -64,16 +64,8 @@
   background-repeat: no-repeat;
   background-position: 60%;
   color: #fcfcfc;
-}
-h1 {
-  font-size: 2.5rem;
-}
-
-h2 {
-  font-size: 2rem;
-}
-p {
-  font-size: 1.8rem;
+  border: 1rem solid black;
+  margin-top: 1rem;
 }
 
 #hero-heading h1 {
