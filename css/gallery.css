@@ -40,27 +40,12 @@
   flex: 1 0 auto;
 }
 
-.product-card > button {
-  width: 5rem;
-  font-size: 1rem;
+.button {
+  width: 6rem;
   height: 4rem;
-  align-self: flex-end;
-  margin-top: 0.5rem;
-  padding: 0.35rem 0.8rem;
-}
-
-.product-btn {
-  align-self: flex-end;
-  margin-top: 0.5rem;
-  padding: 0.35rem 0.8rem;
-  border-radius: 0.4rem;
-  border: 1px solid #bbb;
-  background: #fff;
-  cursor: pointer;
-}
-
-.product-card--full {
-  grid-column: 1 / -1;
+  font-size: 1rem;
+  align-self: end;
+  margin: 0.5rem 0 -0.3rem;
 }
 
 @media all and (min-width: 480px) {
