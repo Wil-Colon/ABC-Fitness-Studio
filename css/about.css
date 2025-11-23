@@ -1,11 +1,3 @@
-colors {
-  color: #17253f;
-  color: #2343bd;
-  color: #91b9d2;
-  color: #def479;
-  color: #fcfcfc;
-}
-
 #about-heading {
   display: flex;
   flex-direction: column;
@@ -93,6 +85,7 @@ colors {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   margin: 2rem auto;
   border: 0.2rem #2343bd solid;
   padding: 1rem;

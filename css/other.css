@@ -1,0 +1,92 @@
+colors {
+  color: #17253f;
+  color: #2343bd;
+  color: #91b9d2;
+  color: #def479;
+  color: #fcfcfc;
+}
+
+#what-people-heading {
+  text-align: center;
+  margin-top: 2rem;
+  text-decoration: underline #def479;
+}
+
+.reviews {
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.community-involvement-heading {
+  text-align: center;
+  text-decoration: underline #def479;
+}
+
+.community-involvement-container {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+.community-involvement-container img {
+  aspect-ratio: 4/3;
+  border-radius: 0.8rem;
+  border: 1px solid #cfcfcf;
+}
+
+.community-involvement-copy-container {
+  margin-top: 1rem;
+}
+
+#collaborations-container {
+  margin: 1rem;
+}
+
+.collaborations-heading h2 {
+  text-align: center;
+  margin-top: 2rem;
+  text-decoration: underline #def479;
+}
+
+.collaborations-event {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.collaborations-event img {
+  aspect-ratio: 4/3;
+  border-radius: 0.8rem;
+  border: 1px solid #cfcfcf;
+}
+
+@media all and (min-width: 480px) {
+  .reviews {
+    flex-direction: row;
+  }
+
+  .community-involvement-container {
+    flex-direction: row;
+  }
+
+  .community-involvement-container img {
+    height: 30vw;
+    max-height: 30rem;
+    min-height: 15rem;
+  }
+  .community-involvement-copy-container {
+    margin: 0 1rem;
+  }
+
+  .collaborations-event {
+    flex-direction: row;
+  }
+  .collaborations-event img {
+    height: 30vw;
+    max-height: 30rem;
+    min-height: 15rem;
+  }
+
+  .collaborations-event p {
+    margin-left: 1rem;
+  }
+}

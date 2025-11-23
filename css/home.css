@@ -134,6 +134,7 @@
   background-color: #17253f;
   border-radius: 1.2rem;
   box-shadow: 0 2.4rem 4rem -2rem rgba(0, 0, 0, 0.35);
+  border: 0.5rem solid #def479;
 }
 
 .offer-title {

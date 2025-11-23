@@ -3,138 +3,186 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/other.css" />
     <title>Testimonials & Community</title>
   </head>
   <body>
-    <header>
-      <img src="images/logo1.png" width="50" alt="ABC Fitness Logo" />
-      <nav aria-label="Primary">
-        <ul>
-          <li><a href="Home.html">Home</a></li>
-          <li><a href="About.html">About Us</a></li>
-          <li><a href="Gallery.html">Gallery</a></li>
-          <li><a href="Other.html">Community</a></li>
-          <li><button aria-label="Open menu">☰</button></li>
+    <header class="header">
+      <img
+        class="header-logo"
+        src="images/logo1.png"
+        width="50px"
+        alt="ABC Fitness
+      Logo"
+      />
+      <nav class="header-menu" aria-label="Main site navigation">
+        <ul class="header-nav">
+          <li>
+            <a href="Home.html" class="header-nav-item" aria-current="home"
+              >Home</a
+            >
+          </li>
+          <li><a href="About.html" class="header-nav-item">About Us</a></li>
+          <li><a href="Gallery.html" class="header-nav-item">Gallery</a></li>
+          <li><a href="Other.html" class="header-nav-item">Community</a></li>
         </ul>
       </nav>
+
+      <button
+        class="burgermenu"
+        type="button"
+        aria-label="Open main menu"
+        aria-controls="mobile-nav"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="2.0em"
+          viewBox="0 0 448 512"
+        >
+          <path
+            d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+          />
+        </svg>
+        <nav
+          id="mobile-nav"
+          class="burgermenu-links"
+          aria-label="Mobile main navigation"
+        >
+          <ul>
+            <li><a href="Home.html" aria-current="home">Home</a></li>
+            <li><a href="About.html">About Us</a></li>
+            <li><a href="Gallery.html">Gallery</a></li>
+            <li><a href="Other.html">Community</a></li>
+          </ul>
+        </nav>
+      </button>
     </header>
 
     <main>
-      <section aria-labelledby="what-people-heading">
-        <h1 id="what-people-heading">What People &amp; Partners Say</h1>
+      <section id="what-people-heading">
+        <h1>What People &amp; Partners Say</h1>
       </section>
 
-      <section aria-labelledby="testimonials-heading">
-        <h2 id="testimonials-heading" class="visually-hidden">Testimonials</h2>
-        <ul class="testimonials-list" aria-label="Testimonials">
-          <li>
-            <article aria-labelledby="cust1">
-              <img
-                src="link"
-                alt="Customer 1 placeholder"
-                width="320"
-                height="200"
-                loading="lazy"
-              />
-              <h3 id="cust1">Customer 1</h3>
-              <p aria-label="5 out of 5 stars">★★★★★</p>
-              <p>
-                Nullam in ligula felis. Suspendisse euismod nunc nec nunc
-                vulputate cursus. Etiam sit amet malesuada leo, nec pretium
-                metus. Nunc nibh odio, semper id porttitor non, venenatis eu
-                nulla. Ut sit amet varius augue. Phasellus a vehicula lacus. Sed
-              </p>
-            </article>
-          </li>
+      <section class="reviews" aria-label="reviews-heading">
+        <article id="reviews-heading" class="reviews-card">
+          <div class="reviews-stars" aria-label="5 out of 5 stars" role="img">
+            ★★★★★
+          </div>
 
-          <li>
-            <article aria-labelledby="cust2">
-              <img
-                src="link"
-                alt="Customer 2 placeholder"
-                width="320"
-                height="200"
-                loading="lazy"
-              />
-              <h3 id="cust2">Customer 2</h3>
-              <p aria-label="5 out of 5 stars">★★★★★</p>
-              <p>
-                Nullam in ligula felis. Suspendisse euismod nunc nec nunc
-                vulputate cursus. Etiam sit amet malesuada leo, nec pretium
-                metus. Nunc nibh odio, semper id porttitor non, venenatis eu
-                nulla. Ut sit amet varius augue. Phasellus a vehicula lacus. Sed
-              </p>
-            </article>
-          </li>
+          <blockquote class="reviews-quote">
+            Great staff! The class left me feeling relaxed and motivated to
+            continue my health journey! Higly recommend!
+          </blockquote>
 
-          <li>
-            <article aria-labelledby="cust3">
-              <img
-                src="link"
-                alt="Customer 3 placeholder"
-                width="320"
-                height="200"
-                loading="lazy"
-              />
-              <h3 id="cust3">Customer 3</h3>
-              <p aria-label="5 out of 5 stars">★★★★★</p>
-              <p>
-                Nullam in ligula felis. Suspendisse euismod nunc nec nunc
-                vulputate cursus. Etiam sit amet malesuada leo, nec pretium
-                metus. Nunc nibh odio, semper id porttitor non, venenatis eu
-                nulla. Ut sit amet varius augue. Phasellus a vehicula lacus. Sed
-              </p>
-            </article>
-          </li>
-        </ul>
-      </section>
+          <div class="reviews-profile">
+            <img class="reviews-avatar" src="images/review-cat.jpg" alt="" />
+            <div class="reviews-name">Kitten Cats</div>
+          </div>
 
-      <section aria-labelledby="community-events-heading">
-        <h2 id="community-events-heading" class="visually-hidden">
-          Community & Events
-        </h2>
-
-        <article aria-labelledby="community-heading">
           <img
-            src="link"
-            alt="Community involvement placeholder"
-            width="640"
-            height="360"
-            loading="lazy"
+            class="reviews-brand"
+            src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"
+            alt="Google"
           />
-          <h3 id="community-heading">
-            <p>Some Event!</p>
-          </h3>
-
-          <p>
-            Nullam in ligula felis. Suspendisse euismod nunc nec nunc vulputate
-            cursus. Etiam sit amet malesuada leo, nec pretium metus. Nunc nibh
-            odio, semper id porttitor non, venenatis eu nulla. Ut sit amet
-            varius augue. Phasellus a vehicula lacus. Sed
-            <a href="#" role="button">Learn More</a>
-          </p>
         </article>
 
-        <article aria-labelledby="events-heading">
-          <h3 id="events-heading">Events &amp; Collaborations</h3>
-          <div>
+        <article id="reviews-heading" class="reviews-card">
+          <div class="reviews-stars" aria-label="5 out of 5 stars" role="img">
+            ★★★★★
+          </div>
+
+          <blockquote class="reviews-quote">
+            The downwards dog poses could use a little work but the class was
+            was a better workout then any walk in the park!
+          </blockquote>
+
+          <div class="reviews-profile">
+            <img class="reviews-avatar" src="images/review-dog.png" alt="" />
+            <div class="reviews-name">Nala</div>
+          </div>
+
+          <img
+            class="reviews-brand"
+            src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"
+            alt="Google"
+          />
+        </article>
+
+        <article id="reviews-heading" class="reviews-card">
+          <div class="reviews-stars" aria-label="5 out of 5 stars" role="img">
+            ★★★★★
+          </div>
+
+          <blockquote class="reviews-quote">
+            The location was excellent, the equipment was top notch. The staff
+            was excellent!
+          </blockquote>
+
+          <div class="reviews-profile">
+            <img class="reviews-avatar" src="images/review-person.png" alt="" />
+            <div class="reviews-name">Kitten Cats</div>
+          </div>
+
+          <img
+            class="reviews-brand"
+            src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"
+            alt="Google"
+          />
+        </article>
+      </section>
+
+      <section id="community-involvement">
+        <h2 class="community-involvement-heading">Community & Events</h2>
+
+        <article class="community-involvement-container">
+          <img
+            src="images/yoga-in-park.jpg"
+            alt="Community involvement, yoga in park"
+            loading="lazy"
+          />
+          <div class="community-involvement-copy-container">
+            <h3 id="community-involvement-heading">
+              <p>Yoga In The Park!</p>
+            </h3>
+
+            <p>
+              On June 19, we enjoyed a beautiful, sunny day at our annual Yoga
+              in the Park event! Our amazing staff and members of the local
+              community came together for a wonderful morning of yoga under the
+              sun. We also shared delicious local treats from the Italian bakery
+              Mario’s and refreshing lemonade from Del’s.
+              <br />
+              <br />
+              If you are interested in hosting a community event with us, please
+              feel free to reach out to us!
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <section id="collaborations-container">
+        <article class="collaborations-heading">
+          <h2>Events &amp; Collaborations</h2>
+          <div class="collaborations-event">
             <img
-              src="link"
-              alt="Events & collaborations placeholder"
-              width="640"
-              height="360"
+              src="images/dog-yoga.jpg"
+              alt="Dog Yoga event"
               loading="lazy"
             />
             <p>
-              Nullam in ligula felis. Suspendisse euismod nunc nec nunc
-              vulputate cursus. Etiam sit amet malesuada leo, nec pretium metus.
-              Nunc nibh odio, semper id porttitor non, venenatis eu nulla. Ut
-              sit amet varius augue. Phasellus a vehicula lacus. Sed
+              <strong> Paws for Homes Rescue </strong> joined us for a fantastic
+              event at our local gym, bringing along some of the friendliest and
+              furriest dogs from their clinic. We had a great time bonding with
+              our furry guests and even enjoyed a little playtime yoga together!
+              <br /><br />Paws for Homes is a local animal shelter and rescue
+              organization. If you're interested in adoption, you can reach them
+              through the link below.
               <a href="#" role="button">Learn More</a>
             </p>
           </div>
-          <div>
+          <div class="collaborations-event">
             <img
               src="link"
               alt="Events & collaborations placeholder"
