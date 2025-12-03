@@ -215,7 +215,7 @@
       </section>
       <div class="newsletter-heading">
         <h2 id="newsletter-heading">Subscribe to Our Newsletter</h2>
-        <form action="#" method="post" aria-label="Newsletter signup">
+        <form id="newsLetter" aria-label="Newsletter signup">
           <label for="email">Email address</label>
           <input
             id="email"
@@ -224,9 +224,10 @@
             inputmode="email"
             autocomplete="email"
             placeholder="you@example.com"
+            minlength="5"
             required
           />
-          <button type="submit">Submit</button>
+          <button id="submitBtn" type="submit">Submit</button>
         </form>
       </div>
 
@@ -238,5 +239,6 @@
       </section>
       <p>© ABC Fitness Studio — All rights reserved</p>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
