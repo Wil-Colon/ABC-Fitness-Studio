@@ -14,9 +14,9 @@ cartBtn.forEach((btn) => {
     const listItem = document.createElement("li");
     let itemName = btn.parentElement.children[1].innerHTML;
     alert(itemName + " added to cart!");
-    counter++;
-    quantity.innerHTML = counter; //adjust the counter count
     cartItems.push(itemName); //add the item to cart array
+    counter = cartItems.length;
+    quantity.innerHTML = counter; //adjust the counter display
     listItem.textContent = itemName;
     listElement.appendChild(listItem);
   });
@@ -30,7 +30,7 @@ clearCart.addEventListener("click", () => {
   if (cartItems.length > 0) {
     alert("Cart Cleared");
     cartItems = [];
-    counter = 0;
+    counter = cartItems.length;
     quantity.innerHTML = counter;
     listElement.replaceChildren();
   } else {
@@ -42,7 +42,7 @@ processCart.addEventListener("click", () => {
   if (cartItems.length > 0) {
     alert("Thank you for your order!");
     cartItems = [];
-    counter = 0;
+    counter = cartItems.length;
     quantity.innerHTML = counter;
     listElement.replaceChildren();
   } else {

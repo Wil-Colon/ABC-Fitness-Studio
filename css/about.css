@@ -92,6 +92,21 @@
   max-width: 65vw;
 }
 
+#contact-us {
+  margin: 2rem;
+  text-align: center;
+}
+
+#contact-us form {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+#contact-us button {
+  width: 10rem;
+}
+
 @media all and (min-width: 480px) {
   #about-heading {
     background-position: 0;
@@ -104,5 +119,10 @@
 
   #cta-heading {
     max-width: 55%;
+  }
+
+  #contact-us form {
+    width: 30vw;
+    min-width: 30rem;
   }
 }

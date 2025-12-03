@@ -153,6 +153,59 @@
       </section>
     </main>
 
+    <section aria-labelledby="contact-us">
+      <div id="contact-us">
+        <h2 id="contact-us-header">Contact Us</h2>
+        <form id="contact-us-form" aria-label="contact us form">
+          <label for="Name">Name</label>
+          <input
+            id="name"
+            name="name"
+            type="text"
+            inputmode="name"
+            autocomplete="name"
+            placeholder="Enter your name"
+            minlength="5"
+            required
+          />
+
+          <label for="email">Email address</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            inputmode="email"
+            autocomplete="email"
+            placeholder="you@example.com"
+            minlength="5"
+            required
+          />
+
+          <label for="phone">Phone</label>
+          <input
+            id="phone"
+            name="phone"
+            type="tel"
+            inputmode="phone"
+            autocomplete="phone"
+            placeholder="Phone number"
+            minlength="5"
+            required
+          />
+          <label for="feedback-message">Phone</label>
+          <textarea
+            id="feedback-message"
+            name="feedback-message"
+            placeholder="Enter any feedback you'd like to provide."
+            rows="5"
+            cols="50"
+          ></textarea>
+
+          <button id="submitBtn" type="submit">Submit</button>
+        </form>
+      </div>
+    </section>
+
     <footer>
       <section class="contact-heading">
         <h2 id="contact-heading">Contact</h2>
@@ -188,6 +241,7 @@
       </section>
       <p>© ABC Fitness Studio — All rights reserved</p>
     </footer>
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/about.js"></script>
   </body>
 </html>
